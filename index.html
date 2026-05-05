@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISR Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#222831',
+            secondary: '#2D4059',
+            accent: '#FF5722',
+            'accent-light': '#FF7043',
+            light: '#EEEEEE',
+            'card-bg': '#1a2030',
+            'card-border': '#2D4059',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="mesh-hero grid-bg">
+
+<!-- ===================== NAVBAR ===================== -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 flex items-center justify-between py-4">
+    <!-- Logo -->
+    <a href="#hero" class="flex items-center gap-3 group flex-shrink-0">
+      <img src="assets/isr-w.png" alt="ISR Tech Logo" class="h-10 w-auto transition-all group-hover:scale-105">
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden lg:flex items-center gap-7">
+      <a href="#problem" class="nav-link">Solusi</a>
+      <a href="#carousel" class="nav-link">Layanan</a>
+      <a href="#templates" class="nav-link">Template</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#pricing" class="nav-link">Estimasi</a>
+      <a href="#process" class="nav-link">Proses</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </div>
+
+    <!-- Right actions -->
+    <div class="flex items-center gap-3">
+      <button id="dm-toggle" title="Toggle mode">
+        <i class="fa-solid fa-moon" style="color:var(--muted)" id="dm-icon"></i>
+      </button>
+      <a href="#order" class="btn-accent px-5 py-2.5 text-sm hidden lg:inline-flex rounded-xl">
+        <i class="fa-solid fa-rocket"></i> Order Sekarang
+      </a>
+      <button id="menu-btn" class="lg:hidden w-10 h-10 rounded-xl card-solid flex items-center justify-center">
+        <i class="fa-solid fa-bars text-white text-sm" id="menu-icon"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden mx-4 mb-3 card-glass rounded-2xl p-5 space-y-1">
+    <a href="#problem" class="mobile-link flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-sm transition-all" style="color:var(--muted)"><i class="fa-solid fa-bolt w-4"></i>Solusi</a>
+    <a href="#carousel" class="mobile-link flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-sm transition-all" style="color:var(--muted)"><i class="fa-solid fa-briefcase w-4"></i>Layanan</a>
+    <a href="#templates" class="mobile-link flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-sm transition-all" style="color:var(--muted)"><i class="fa-solid fa-layer-group w-4"></i>Template</a>
+    <a href="#portfolio" class="mobile-link flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-sm transition-all" style="color:var(--muted)"><i class="fa-solid fa-images w-4"></i>Portfolio</a>
+    <a href="#pricing" class="mobile-link flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-sm transition-all" style="color:var(--muted)"><i class="fa-solid fa-calculator w-4"></i>Estimasi</a>
+    <a href="#process" class="mobile-link flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-sm transition-all" style="color:var(--muted)"><i class="fa-solid fa-route w-4"></i>Proses</a>
+    <a href="#faq" class="mobile-link flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-sm transition-all" style="color:var(--muted)"><i class="fa-solid fa-circle-question w-4"></i>FAQ</a>
+    <div class="pt-2">
+      <a href="#order" class="btn-accent w-full py-3.5 text-sm rounded-xl block text-center">
+        <i class="fa-solid fa-rocket"></i> Mulai Project Sekarang
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero" class="min-h-screen flex items-center pt-28 pb-20 px-5 lg:px-8 relative overflow-hidden">
+  <!-- Decorative blobs -->
+  <div class="pointer-events-none absolute inset-0 overflow-hidden">
+    <div class="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full" style="background:radial-gradient(circle,rgba(255,87,34,0.12) 0%,transparent 70%);filter:blur(70px)"></div>
+    <div class="absolute bottom-0 -left-32 w-[420px] h-[420px] rounded-full" style="background:radial-gradient(circle,rgba(45,64,89,0.5) 0%,transparent 70%);filter:blur(60px)"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+    <!-- Left Content -->
+    <div class="space-y-8">
+      <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 text-accent text-sm font-semibold">
+        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+        Tersedia untuk project baru — 2026
+      </div>
+
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+        <span class="text-light">Aplikasi Digital</span><br/>
+        <span class="shimmer-text">Khusus Bisnis</span><br/>
+        <span class="text-light">Anda.</span>
+      </h1>
+
+      <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-lg">
+        ISR Tech membangun <strong class="text-light">aplikasi CRUD, dashboard monitoring, dan sistem digitalisasi</strong> berbasis Google Sheets & LocalStorage — tanpa server mahal, transparan, dan langsung pakai.
+      </p>
+
+      <!-- Stats row -->
+      <div class="flex gap-6 flex-wrap">
+        <div class="text-center">
+          <div class="text-3xl font-black text-accent counter-num" data-target="50">0</div>
+          <div class="text-xs text-gray-500 mt-1 font-medium">Project Selesai</div>
+        </div>
+        <div class="w-px bg-white/10 self-stretch"></div>
+        <div class="text-center">
+          <div class="text-3xl font-black text-accent counter-num" data-target="30">0</div>
+          <div class="text-xs text-gray-500 mt-1 font-medium">Klien Puas</div>
+        </div>
+        <div class="w-px bg-white/10 self-stretch"></div>
+        <div class="text-center">
+          <div class="text-3xl font-black text-accent counter-num" data-target="3">0</div>
+          <div class="text-xs text-gray-500 mt-1 font-medium">Tahun Pengalaman</div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="https://wa.me/6283829058640?text=Halo%20ISR%20Tech,%20saya%20ingin%20konsultasi%20gratis" target="_blank"
+           class="btn-accent px-7 py-4 rounded-2xl font-bold text-base flex items-center justify-center gap-3 relative z-10">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          Konsultasi Gratis
+        </a>
+        <a href="#order" class="btn-outline px-7 py-4 rounded-2xl font-bold text-base flex items-center justify-center gap-3">
+          <i class="fa-solid fa-arrow-right"></i>
+          Mulai Project
+        </a>
+      </div>
+
+      <p class="text-gray-500 text-sm flex items-center gap-2">
+        <i class="fa-solid fa-shield-halved text-accent/60"></i>
+        Free konsultasi · Estimasi transparan · Garansi revisi
+      </p>
+    </div>
+
+    <!-- Right — Dashboard Mockup -->
+    <div class="relative float-anim hidden lg:block">
+      <!-- Main dashboard -->
+      <div class="dashboard-mockup pulse-glow">
+        <div class="mockup-bar">
+          <span class="mockup-dot" style="background:#FF5F57"></span>
+          <span class="mockup-dot" style="background:#FFBD2E"></span>
+          <span class="mockup-dot" style="background:#28CA41"></span>
+          <span class="flex-1 mx-4 bg-gray-800 rounded h-5 text-gray-500 text-xs flex items-center px-3">app.isrtech.id/dashboard</span>
+        </div>
+        <div class="p-5 space-y-4" style="background:#141b26">
+          <!-- Top metrics -->
+          <div class="grid grid-cols-3 gap-3">
+            <div class="card-solid rounded-xl p-3">
+              <div class="text-gray-500 text-xs mb-1">Total Revenue</div>
+              <div class="text-light font-bold text-lg">Rp 2.4M</div>
+              <div class="text-green-400 text-xs flex items-center gap-1 mt-1"><i class="fa-solid fa-arrow-up text-[10px]"></i>+12.5%</div>
+            </div>
+            <div class="card-solid rounded-xl p-3">
+              <div class="text-gray-500 text-xs mb-1">New Orders</div>
+              <div class="text-light font-bold text-lg">348</div>
+              <div class="text-green-400 text-xs flex items-center gap-1 mt-1"><i class="fa-solid fa-arrow-up text-[10px]"></i>+8.1%</div>
+            </div>
+            <div class="card-solid rounded-xl p-3">
+              <div class="text-gray-500 text-xs mb-1">Active Users</div>
+              <div class="text-light font-bold text-lg">1,204</div>
+              <div class="text-accent text-xs flex items-center gap-1 mt-1"><i class="fa-solid fa-circle text-[8px] animate-pulse"></i>Live</div>
+            </div>
+          </div>
+          <!-- Chart -->
+          <div class="card-solid rounded-xl p-4">
+            <div class="flex justify-between items-center mb-3">
+              <div class="text-light text-sm font-semibold">Revenue Overview</div>
+              <div class="text-gray-500 text-xs">Juli 2026</div>
+            </div>
+            <div class="flex items-end gap-2 h-24">
+              <div class="chart-bar flex-1" style="height:40%"></div>
+              <div class="chart-bar flex-1" style="height:65%"></div>
+              <div class="chart-bar flex-1" style="height:50%"></div>
+              <div class="chart-bar flex-1" style="height:80%"></div>
+              <div class="chart-bar flex-1" style="height:60%"></div>
+              <div class="chart-bar flex-1" style="height:90%"></div>
+              <div class="chart-bar flex-1" style="height:70%"></div>
+              <div class="chart-bar flex-1" style="height:100%"></div>
+            </div>
+          </div>
+          <!-- Table preview -->
+          <div class="card-solid rounded-xl p-3">
+            <div class="text-light text-xs font-semibold mb-2">Recent Transactions</div>
+            <div class="space-y-2">
+              <div class="flex justify-between text-xs">
+                <span class="text-gray-400">Order #2841</span>
+                <span class="text-green-400 font-medium">Rp 450,000</span>
+              </div>
+              <div class="flex justify-between text-xs">
+                <span class="text-gray-400">Order #2840</span>
+                <span class="text-green-400 font-medium">Rp 1,200,000</span>
+              </div>
+              <div class="flex justify-between text-xs">
+                <span class="text-gray-400">Order #2839</span>
+                <span class="text-accent font-medium">Pending</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating badges -->
+      <div class="absolute -top-4 -left-6 card-glass rounded-2xl px-4 py-3 flex items-center gap-3 shadow-xl">
+        <div class="w-9 h-9 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
+          <i class="fa-solid fa-check text-sm"></i>
+        </div>
+        <div>
+          <div class="text-light text-xs font-bold">Project Launched!</div>
+          <div class="text-gray-400 text-[11px]">2 jam yang lalu</div>
+        </div>
+      </div>
+      <div class="absolute -bottom-4 -right-4 card-glass rounded-2xl px-4 py-3 flex items-center gap-3 shadow-xl">
+        <div class="w-9 h-9 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+          <i class="fa-solid fa-chart-line text-sm"></i>
+        </div>
+        <div>
+          <div class="text-light text-xs font-bold">+68% Efisiensi</div>
+          <div class="text-gray-400 text-[11px]">Setelah digitalisasi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MASALAH & SOLUSI ===================== -->
+<section id="problem" class="py-24 px-4 md:px-8 relative">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-4 py-2 text-red-400 text-sm font-semibold mb-6">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Masalah yang Sering Terjadi
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-light mb-4">Bisnis Anda Masih <span class="text-accent">Manual?</span></h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Banyak bisnis kehilangan potensi besar karena terhambat sistem yang tidak terintegrasi</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <!-- Pain Points -->
+      <div class="space-y-4 reveal">
+        <h3 class="text-lg font-bold text-gray-300 mb-6 flex items-center gap-2">
+          <span class="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center text-red-400 text-xs"><i class="fa-solid fa-xmark"></i></span>
+          Masalah Umum Bisnis Anda
+        </h3>
+        <div class="card-solid rounded-2xl p-5 flex items-start gap-4 border-l-4 border-red-500/50">
+          <div class="w-10 h-10 rounded-xl bg-red-500/15 flex items-center justify-center text-red-400 shrink-0">
+            <i class="fa-solid fa-file-excel"></i>
+          </div>
+          <div>
+            <div class="text-light font-semibold mb-1">Data Masih di Excel & Spreadsheet</div>
+            <div class="text-gray-400 text-sm leading-relaxed">Data tersebar di banyak file, susah dicari, mudah hilang, dan tidak bisa diakses bersama-sama secara real-time.</div>
+          </div>
+        </div>
+        <div class="card-solid rounded-2xl p-5 flex items-start gap-4 border-l-4 border-red-500/50">
+          <div class="w-10 h-10 rounded-xl bg-red-500/15 flex items-center justify-center text-red-400 shrink-0">
+            <i class="fa-solid fa-link-slash"></i>
+          </div>
+          <div>
+            <div class="text-light font-semibold mb-1">Sistem Tidak Terintegrasi</div>
+            <div class="text-gray-400 text-sm leading-relaxed">Setiap divisi pakai sistem berbeda, data duplikat, proses sering double input, dan tidak ada satu sumber kebenaran.</div>
+          </div>
+        </div>
+        <div class="card-solid rounded-2xl p-5 flex items-start gap-4 border-l-4 border-red-500/50">
+          <div class="w-10 h-10 rounded-xl bg-red-500/15 flex items-center justify-center text-red-400 shrink-0">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <div>
+            <div class="text-light font-semibold mb-1">Laporan Manual Memakan Waktu</div>
+            <div class="text-gray-400 text-sm leading-relaxed">Butuh berjam-jam untuk buat laporan. Data tidak real-time. Keputusan bisnis jadi terlambat dan tidak akurat.</div>
+          </div>
+        </div>
+        <div class="card-solid rounded-2xl p-5 flex items-start gap-4 border-l-4 border-red-500/50">
+          <div class="w-10 h-10 rounded-xl bg-red-500/15 flex items-center justify-center text-red-400 shrink-0">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <div>
+            <div class="text-light font-semibold mb-1">Tidak Ada Akses Mobile</div>
+            <div class="text-gray-400 text-sm leading-relaxed">Tim di lapangan tidak bisa akses data. Semua harus ke kantor dulu atau kirim chat yang kacau.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solutions -->
+      <div class="space-y-4 reveal">
+        <h3 class="text-lg font-bold text-gray-300 mb-6 flex items-center gap-2">
+          <span class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center text-green-400 text-xs"><i class="fa-solid fa-check"></i></span>
+          Solusi ISR Tech
+        </h3>
+        <div class="card-solid rounded-2xl p-5 flex items-start gap-4 border-l-4 border-accent/60 glow-accent">
+          <div class="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center text-white shrink-0">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <div>
+            <div class="text-light font-semibold mb-1">Sistem Database Terpusat</div>
+            <div class="text-gray-400 text-sm leading-relaxed">Semua data tersimpan rapi, terstruktur, dan bisa diakses kapan saja, di mana saja, secara real-time dengan aman.</div>
+          </div>
+        </div>
+        <div class="card-solid rounded-2xl p-5 flex items-start gap-4 border-l-4 border-accent/60">
+          <div class="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center text-white shrink-0">
+            <i class="fa-solid fa-plug"></i>
+          </div>
+          <div>
+            <div class="text-light font-semibold mb-1">Integrasi Antar Sistem</div>
+            <div class="text-gray-400 text-sm leading-relaxed">Semua sistem bisnis terhubung. Tidak ada lagi double input. Data mengalir otomatis antar divisi dan aplikasi.</div>
+          </div>
+        </div>
+        <div class="card-solid rounded-2xl p-5 flex items-start gap-4 border-l-4 border-accent/60">
+          <div class="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center text-white shrink-0">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <div>
+            <div class="text-light font-semibold mb-1">Dashboard & Laporan Otomatis</div>
+            <div class="text-gray-400 text-sm leading-relaxed">Data divisualisasikan secara real-time. Laporan dibuat otomatis. Keputusan bisnis jadi lebih cepat dan tepat.</div>
+          </div>
+        </div>
+        <div class="card-solid rounded-2xl p-5 flex items-start gap-4 border-l-4 border-accent/60">
+          <div class="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center text-white shrink-0">
+            <i class="fa-solid fa-mobile-alt"></i>
+          </div>
+          <div>
+            <div class="text-light font-semibold mb-1">Akses di Semua Device</div>
+            <div class="text-gray-400 text-sm leading-relaxed">Aplikasi web responsive yang bisa diakses di HP, tablet, dan PC. Tim lapangan bisa input & lihat data langsung.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SEGMENTASI USER ===================== -->
+<section id="segment" class="py-24 px-5 lg:px-8 mesh-mid">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12 reveal">
+      <div class="inline-flex items-center gap-2 bg-secondary/30 border border-secondary/40 rounded-full px-4 py-2 text-blue-300 text-sm font-semibold mb-6">
+        <i class="fa-solid fa-users"></i>
+        Untuk Siapa?
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-light mb-4">Solusi untuk <span class="text-accent">Semua Skala</span></h2>
+      <p class="text-gray-400 text-lg max-w-xl mx-auto">ISR Tech melayani dari UMKM hingga instansi besar dengan solusi yang disesuaikan</p>
+    </div>
+
+    <!-- Segment Tabs -->
+    <div class="flex justify-center gap-3 mb-10 flex-wrap reveal">
+      <button class="seg-tab card-solid border border-card-border rounded-2xl px-6 py-3 text-sm font-semibold active" data-seg="0">
+        <i class="fa-solid fa-store mr-2 text-accent"></i>Personal / UMKM
+      </button>
+      <button class="seg-tab card-solid border border-card-border rounded-2xl px-6 py-3 text-sm font-semibold" data-seg="1">
+        <i class="fa-solid fa-building mr-2 text-accent"></i>Perusahaan
+      </button>
+      <button class="seg-tab card-solid border border-card-border rounded-2xl px-6 py-3 text-sm font-semibold" data-seg="2">
+        <i class="fa-solid fa-landmark mr-2 text-accent"></i>Instansi
+      </button>
+    </div>
+
+    <!-- Segment Content - Rendered by JS -->
+    <div id="seg-content" class="reveal"></div>
+  </div>
+</section>
+
+<!-- ===================== CAROUSEL LAYANAN ===================== -->
+<section id="carousel" class="py-24 px-4 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 text-accent text-sm font-semibold mb-6">
+        <i class="fa-solid fa-briefcase"></i> Layanan Kami
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-light mb-4">Apa yang <span class="shimmer-text">Kami Bangun</span></h2>
+      <p class="text-gray-400 text-lg max-w-xl mx-auto">Dari digitalisasi pencatatan manual hingga dashboard monitoring real-time — semua tanpa server mahal</p>
+    </div>
+
+    <!-- Carousel -->
+    <div class="reveal relative">
+      <div class="carousel-container relative overflow-hidden rounded-3xl" style="background: #0a0e15; border: 1px solid rgba(45,64,89,0.4);">
+        
+        <!-- Slides wrapper - Rendered by JS -->
+        <div class="carousel-track flex transition-transform duration-500 ease-in-out" id="carousel-track"></div>
+
+        <!-- Navigation Arrows -->
+        <button class="absolute top-1/2 -translate-y-1/2 left-4 w-10 h-10 rounded-full bg-white/10 hover:bg-accent/80 text-white flex items-center justify-center transition-all z-20 backdrop-blur-sm" id="prev-btn">
+          <i class="fa-solid fa-chevron-left text-sm"></i>
+        </button>
+        <button class="absolute top-1/2 -translate-y-1/2 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-accent/80 text-white flex items-center justify-center transition-all z-20 backdrop-blur-sm" id="next-btn">
+          <i class="fa-solid fa-chevron-right text-sm"></i>
+        </button>
+
+        <!-- Dots Indicator - Rendered by JS -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20"></div>
+      </div>
+
+      <!-- Thumbnail preview - Rendered by JS -->
+      <div class="flex gap-2 justify-center mt-6"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEMPLATE / PRODUK SIAP PAKAI ===================== -->
+<section id="templates" class="py-24 px-4 md:px-8" style="background: linear-gradient(180deg, transparent, rgba(45,64,89,0.08), transparent);">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-2 bg-secondary/30 border border-secondary/40 rounded-full px-4 py-2 text-blue-300 text-sm font-semibold mb-6">
+        <i class="fa-solid fa-bolt"></i>
+        Produk Siap Pakai
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-light mb-4">Template <span class="text-accent">Langsung Pakai</span></h2>
+      <p class="text-gray-400 text-lg max-w-xl mx-auto">Solusi siap deploy dengan waktu lebih cepat dan harga lebih terjangkau</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7 reveal">
+      <!-- Template 1 -->
+      <div class="card-solid rounded-2xl overflow-hidden hover:border-accent/30 transition-all group">
+        <div class="h-44 relative overflow-hidden" style="background: linear-gradient(135deg, #1a2230, #0f1520);">
+          <div class="absolute inset-3 rounded-xl overflow-hidden" style="background:#0d1117; border: 1px solid #222">
+            <div class="h-6 flex items-center gap-1.5 px-3" style="background:#111">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span>
+              <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+              <span class="w-2 h-2 rounded-full bg-green-500"></span>
+            </div>
+            <div class="p-2 grid grid-cols-3 gap-1.5">
+              <div class="rounded p-2 text-center" style="background:#161b22">
+                <div class="text-[8px] text-gray-400">Revenue</div>
+                <div class="text-[10px] font-bold text-accent">12.5M</div>
+              </div>
+              <div class="rounded p-2 text-center" style="background:#161b22">
+                <div class="text-[8px] text-gray-400">Orders</div>
+                <div class="text-[10px] font-bold text-green-400">348</div>
+              </div>
+              <div class="rounded p-2 text-center" style="background:#161b22">
+                <div class="text-[8px] text-gray-400">Users</div>
+                <div class="text-[10px] font-bold text-blue-400">1.2K</div>
+              </div>
+            </div>
+            <div class="mx-2 rounded" style="background:#161b22; height:40px; display:flex; align-items:flex-end; padding:4px; gap:3px;">
+              <div style="width:12%;height:60%;background:#FF5722;border-radius:2px 2px 0 0;"></div>
+              <div style="width:12%;height:80%;background:#FF5722;border-radius:2px 2px 0 0;"></div>
+              <div style="width:12%;height:50%;background:#FF5722;border-radius:2px 2px 0 0;"></div>
+              <div style="width:12%;height:90%;background:#FF5722;border-radius:2px 2px 0 0;"></div>
+              <div style="width:12%;height:70%;background:#FF5722;border-radius:2px 2px 0 0;"></div>
+              <div style="width:12%;height:100%;background:#FF7043;border-radius:2px 2px 0 0;"></div>
+            </div>
+          </div>
+          <div class="absolute top-3 right-3 bg-accent text-white text-[10px] font-bold px-2 py-1 rounded-full">POPULER</div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-light font-bold text-base mb-2">Business Dashboard Pro</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Dashboard bisnis lengkap dengan laporan penjualan, manajemen produk, dan analitik real-time.</p>
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span class="text-[11px] bg-secondary/30 text-gray-300 px-2 py-1 rounded-lg">Multi User</span>
+            <span class="text-[11px] bg-secondary/30 text-gray-300 px-2 py-1 rounded-lg">Export Excel</span>
+            <span class="text-[11px] bg-secondary/30 text-gray-300 px-2 py-1 rounded-lg">Mobile Ready</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-gray-500 text-xs">Mulai dari</span>
+              <div class="text-accent font-bold">Rp 3.500.000</div>
+            </div>
+            <div class="flex gap-2">
+              <button class="btn-outline px-3 py-2 rounded-xl text-xs font-semibold">Demo</button>
+              <button class="btn-accent px-4 py-2 rounded-xl text-xs font-semibold relative z-10">Gunakan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Template 2 -->
+      <div class="card-solid rounded-2xl overflow-hidden hover:border-accent/30 transition-all">
+        <div class="h-44 relative overflow-hidden" style="background: linear-gradient(135deg, #1a2230, #0f1520);">
+          <div class="absolute inset-3 rounded-xl overflow-hidden" style="background:#0d1117; border: 1px solid #222; padding: 10px;">
+            <div class="text-[9px] text-gray-400 mb-2">Inventory System</div>
+            <div class="space-y-1.5">
+              <div class="flex justify-between items-center">
+                <div class="h-2 rounded bg-secondary/50" style="width:55%"></div>
+                <div class="text-[9px] text-green-400">Stok: 120</div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="h-2 rounded bg-secondary/50" style="width:70%"></div>
+                <div class="text-[9px] text-yellow-400">Stok: 15</div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="h-2 rounded bg-secondary/50" style="width:40%"></div>
+                <div class="text-[9px] text-red-400">Stok: 0</div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="h-2 rounded bg-secondary/50" style="width:85%"></div>
+                <div class="text-[9px] text-green-400">Stok: 340</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-light font-bold text-base mb-2">Inventory Management</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Sistem manajemen stok & gudang dengan notifikasi otomatis saat stok menipis.</p>
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span class="text-[11px] bg-secondary/30 text-gray-300 px-2 py-1 rounded-lg">Barcode Scan</span>
+            <span class="text-[11px] bg-secondary/30 text-gray-300 px-2 py-1 rounded-lg">Alert Otomatis</span>
+            <span class="text-[11px] bg-secondary/30 text-gray-300 px-2 py-1 rounded-lg">Multi Gudang</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-gray-500 text-xs">Mulai dari</span>
+              <div class="text-accent font-bold">Rp 2.800.000</div>
+            </div>
+            <div class="flex gap-2">
+              <button class="btn-outline px-3 py-2 rounded-xl text-xs font-semibold">Demo</button>
+              <button class="btn-accent px-4 py-2 rounded-xl text-xs font-semibold relative z-10">Gunakan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Template 3 -->
+      <div class="card-solid rounded-2xl overflow-hidden hover:border-accent/30 transition-all">
+        <div class="h-44 relative overflow-hidden" style="background: linear-gradient(135deg, #1a2230, #0f1520);">
+          <div class="absolute inset-3 rounded-xl overflow-hidden" style="background:#0d1117; border: 1px solid #222; padding: 10px;">
+            <div class="text-[9px] text-gray-400 mb-2">HR & Attendance</div>
+            <div class="grid grid-cols-7 gap-1 mb-2">
+              <div class="text-[8px] text-gray-500 text-center">S</div>
+              <div class="text-[8px] text-gray-500 text-center">M</div>
+              <div class="text-[8px] text-gray-500 text-center">T</div>
+              <div class="text-[8px] text-gray-500 text-center">W</div>
+              <div class="text-[8px] text-gray-500 text-center">T</div>
+              <div class="text-[8px] text-gray-500 text-center">F</div>
+              <div class="text-[8px] text-gray-500 text-center">S</div>
+            </div>
+            <div class="grid grid-cols-7 gap-1">
+              <div class="w-5 h-5 rounded bg-green-500/50 text-[8px] text-center leading-5 text-white">1</div>
+              <div class="w-5 h-5 rounded bg-green-500/50 text-[8px] text-center leading-5 text-white">2</div>
+              <div class="w-5 h-5 rounded bg-green-500/50 text-[8px] text-center leading-5 text-white">3</div>
+              <div class="w-5 h-5 rounded bg-red-500/50 text-[8px] text-center leading-5 text-white">4</div>
+              <div class="w-5 h-5 rounded bg-green-500/50 text-[8px] text-center leading-5 text-white">5</div>
+              <div class="w-5 h-5 rounded bg-gray-700/50 text-[8px] text-center leading-5 text-white">6</div>
+              <div class="w-5 h-5 rounded bg-gray-700/50 text-[8px] text-center leading-5 text-white">7</div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-light font-bold text-base mb-2">HR & Absensi Digital</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">Sistem absensi online, manajemen karyawan, slip gaji otomatis, dan laporan kehadiran.</p>
+          <div class="flex flex-wrap gap-1.5 mb-4">
+            <span class="text-[11px] bg-secondary/30 text-gray-300 px-2 py-1 rounded-lg">GPS Tracking</span>
+            <span class="text-[11px] bg-secondary/30 text-gray-300 px-2 py-1 rounded-lg">Slip Gaji Auto</span>
+            <span class="text-[11px] bg-secondary/30 text-gray-300 px-2 py-1 rounded-lg">Cuti Online</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-gray-500 text-xs">Mulai dari</span>
+              <div class="text-accent font-bold">Rp 4.200.000</div>
+            </div>
+            <div class="flex gap-2">
+              <button class="btn-outline px-3 py-2 rounded-xl text-xs font-semibold">Demo</button>
+              <button class="btn-accent px-4 py-2 rounded-xl text-xs font-semibold relative z-10">Gunakan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-10 reveal">
+      <a href="https://wa.me/6283829058640?text=Halo,%20saya%20ingin%20lihat%20template%20lengkap" target="_blank"
+         class="btn-outline inline-flex items-center gap-2 px-7 py-4 rounded-2xl font-semibold">
+        <i class="fa-solid fa-grid-2"></i>Lihat Semua Template
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PORTFOLIO ===================== -->
+<section id="portfolio" class="py-24 px-4 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 text-accent text-sm font-semibold mb-6">
+        <i class="fa-solid fa-briefcase"></i>
+        Portfolio
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-light mb-4">Karya Nyata, <span class="text-accent">Hasil Terukur</span></h2>
+      <p class="text-gray-400 text-lg max-w-xl mx-auto">Beberapa project yang telah kami selesaikan dan berdampak langsung pada bisnis klien</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+      <!-- Portfolio 1 -->
+      <div class="portfolio-card card-solid rounded-2xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-all">
+        <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #0a3d62, #1e3799);">
+          <div class="absolute inset-0 flex items-center justify-center opacity-30">
+            <i class="fa-solid fa-chart-line text-8xl text-white"></i>
+          </div>
+          <div class="overlay absolute inset-0 bg-accent/90 flex items-center justify-center flex-col gap-3">
+            <span class="text-white font-bold">Lihat Detail</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-white text-xl"></i>
+          </div>
+          <div class="absolute bottom-3 left-3">
+            <span class="bg-accent text-white text-[10px] font-bold px-2.5 py-1 rounded-full">Manufaktur</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-light font-bold mb-1">Dashboard Produksi PT. XYZ</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-3">Sistem monitoring produksi real-time terintegrasi dengan mesin dan ERP. Laporan harian otomatis ke manajemen.</p>
+          <div class="flex items-center gap-4 text-xs">
+            <span class="text-green-400 flex items-center gap-1"><i class="fa-solid fa-arrow-up text-[10px]"></i>68% Efisiensi</span>
+            <span class="text-blue-400 flex items-center gap-1"><i class="fa-solid fa-clock text-[10px]"></i>3 Bulan</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio 2 -->
+      <div class="portfolio-card card-solid rounded-2xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-all">
+        <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+          <div class="absolute inset-0 flex items-center justify-center opacity-30">
+            <i class="fa-solid fa-store text-8xl text-white"></i>
+          </div>
+          <div class="overlay absolute inset-0 bg-accent/90 flex items-center justify-center flex-col gap-3">
+            <span class="text-white font-bold">Lihat Detail</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-white text-xl"></i>
+          </div>
+          <div class="absolute bottom-3 left-3">
+            <span class="bg-blue-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">Retail</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-light font-bold mb-1">POS & Inventory Toko Retail</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-3">Sistem kasir lengkap dengan manajemen 500+ SKU, laporan penjualan, dan notifikasi stok menipis via WhatsApp.</p>
+          <div class="flex items-center gap-4 text-xs">
+            <span class="text-green-400 flex items-center gap-1"><i class="fa-solid fa-arrow-up text-[10px]"></i>40% Lebih Cepat</span>
+            <span class="text-blue-400 flex items-center gap-1"><i class="fa-solid fa-clock text-[10px]"></i>6 Minggu</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio 3 -->
+      <div class="portfolio-card card-solid rounded-2xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-all">
+        <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #0f3460, #533483);">
+          <div class="absolute inset-0 flex items-center justify-center opacity-30">
+            <i class="fa-solid fa-landmark text-8xl text-white"></i>
+          </div>
+          <div class="overlay absolute inset-0 bg-accent/90 flex items-center justify-center flex-col gap-3">
+            <span class="text-white font-bold">Lihat Detail</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-white text-xl"></i>
+          </div>
+          <div class="absolute bottom-3 left-3">
+            <span class="bg-purple-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">Pemerintahan</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-light font-bold mb-1">Sistem Informasi Desa — Kec. ABC</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-3">Portal layanan warga digital, data kependudukan, dan dashboard monev program pembangunan desa.</p>
+          <div class="flex items-center gap-4 text-xs">
+            <span class="text-green-400 flex items-center gap-1"><i class="fa-solid fa-arrow-up text-[10px]"></i>1200+ Warga Terlayani</span>
+            <span class="text-blue-400 flex items-center gap-1"><i class="fa-solid fa-clock text-[10px]"></i>2 Bulan</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio 4 -->
+      <div class="portfolio-card card-solid rounded-2xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-all">
+        <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #1b2631, #2e4057);">
+          <div class="absolute inset-0 flex items-center justify-center opacity-30">
+            <i class="fa-solid fa-users text-8xl text-white"></i>
+          </div>
+          <div class="overlay absolute inset-0 bg-accent/90 flex items-center justify-center flex-col gap-3">
+            <span class="text-white font-bold">Lihat Detail</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-white text-xl"></i>
+          </div>
+          <div class="absolute bottom-3 left-3">
+            <span class="bg-teal-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">HRD</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-light font-bold mb-1">HR Attendance & Payroll System</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-3">Absensi GPS, manajemen 200+ karyawan, perhitungan gaji otomatis, dan laporan bulanan ke direksi.</p>
+          <div class="flex items-center gap-4 text-xs">
+            <span class="text-green-400 flex items-center gap-1"><i class="fa-solid fa-arrow-up text-[10px]"></i>90% Waktu Hemat</span>
+            <span class="text-blue-400 flex items-center gap-1"><i class="fa-solid fa-clock text-[10px]"></i>2.5 Bulan</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio 5 -->
+      <div class="portfolio-card card-solid rounded-2xl overflow-hidden group cursor-pointer hover:-translate-y-1 transition-all">
+        <div class="h-48 relative overflow-hidden" style="background: linear-gradient(135deg, #1c0a00, #3d1c00);">
+          <div class="absolute inset-0 flex items-center justify-center opacity-30">
+            <i class="fa-solid fa-truck text-8xl text-white"></i>
+          </div>
+          <div class="overlay absolute inset-0 bg-accent/90 flex items-center justify-center flex-col gap-3">
+            <span class="text-white font-bold">Lihat Detail</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-white text-xl"></i>
+          </div>
+          <div class="absolute bottom-3 left-3">
+            <span class="bg-orange-500 text-white text-[10px] font-bold px-2.5 py-1 rounded-full">Logistik</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="text-light font-bold mb-1">Logistic Tracking & Delivery App</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-3">Tracking pengiriman real-time, manajemen armada, bukti terima digital, dan laporan pengiriman harian.</p>
+          <div class="flex items-center gap-4 text-xs">
+            <span class="text-green-400 flex items-center gap-1"><i class="fa-solid fa-arrow-up text-[10px]"></i>35% Biaya Turun</span>
+            <span class="text-blue-400 flex items-center gap-1"><i class="fa-solid fa-clock text-[10px]"></i>4 Bulan</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- More CTA -->
+      <div class="card-solid rounded-2xl flex items-center justify-center p-8 text-center hover:border-accent/30 transition-all group" style="border: 2px dashed rgba(45,64,89,0.5);">
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent text-2xl mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="text-light font-bold mb-2">Lihat 20+ Portfolio</div>
+          <div class="text-gray-400 text-sm mb-4">Project dari berbagai industri</div>
+          <a href="https://wa.me/6283829058640?text=Halo,%20saya%20ingin%20lihat%20portfolio%20lengkap%20ISR%20Tech" target="_blank"
+             class="btn-outline px-4 py-2.5 rounded-xl text-sm font-semibold inline-block">Lihat Semua</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DEMO ===================== -->
+<section id="demo" class="py-24 px-4 md:px-8" style="background: linear-gradient(180deg, transparent, rgba(45,64,89,0.1), transparent);">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12 reveal">
+      <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 text-accent text-sm font-semibold mb-6">
+        <i class="fa-solid fa-play"></i>
+        Live Preview
+      </div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-light mb-4">Coba <span class="text-accent">Demo Langsung</span></h2>
+      <p class="text-gray-400 text-lg max-w-xl mx-auto">Lihat seperti apa tampilan dan fitur aplikasi yang kami buat sebelum memutuskan</p>
+    </div>
+
+    <div class="reveal">
+      <div class="dashboard-mockup mx-auto max-w-4xl">
+        <div class="mockup-bar">
+          <span class="mockup-dot" style="background:#FF5F57"></span>
+          <span class="mockup-dot" style="background:#FFBD2E"></span>
+          <span class="mockup-dot" style="background:#28CA41"></span>
+          <span class="flex-1 mx-4 bg-gray-800 rounded h-5 text-gray-500 text-xs flex items-center px-3">demo.isrtech.id</span>
+          <span class="text-gray-600 text-xs flex items-center gap-1"><i class="fa-solid fa-lock text-[10px]"></i>Secure</span>
+        </div>
+
+        <!-- Demo Content -->
+        <div class="p-6" style="background:#0f1520; min-height: 400px;">
+          <div class="flex gap-6 h-full">
+            <!-- Sidebar -->
+            <div class="w-48 shrink-0 hidden md:block">
+              <div class="space-y-1">
+                <div class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-white text-xs font-medium" style="background:rgba(255,87,34,0.2)">
+                  <i class="fa-solid fa-grid-2 text-accent"></i>Dashboard
+                </div>
+                <div class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-500 text-xs">
+                  <i class="fa-solid fa-box"></i>Produk
+                </div>
+                <div class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-500 text-xs">
+                  <i class="fa-solid fa-file-invoice"></i>Penjualan
+                </div>
+                <div class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-500 text-xs">
+                  <i class="fa-solid fa-users"></i>Pelanggan
+                </div>
+                <div class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-500 text-xs">
+                  <i class="fa-solid fa-chart-bar"></i>Laporan
+                </div>
+                <div class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-500 text-xs">
+                  <i class="fa-solid fa-gear"></i>Pengaturan
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="flex-1 space-y-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-light font-bold">Selamat datang, Admin 👋</h3>
+                  <div class="text-gray-500 text-xs">Senin, 27 April 2026</div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-white text-xs font-bold">A</div>
+                </div>
+              </div>
+
+              <!-- KPI Cards -->
+              <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+                <div class="rounded-xl p-3" style="background:rgba(255,87,34,0.08); border:1px solid rgba(255,87,34,0.2)">
+                  <div class="text-gray-400 text-[10px] mb-1">Revenue Hari Ini</div>
+                  <div class="text-light font-bold text-sm">Rp 4.2Jt</div>
+                  <div class="text-green-400 text-[10px]">↑ 12%</div>
+                </div>
+                <div class="rounded-xl p-3" style="background:rgba(45,64,89,0.3); border:1px solid rgba(45,64,89,0.4)">
+                  <div class="text-gray-400 text-[10px] mb-1">Order Masuk</div>
+                  <div class="text-light font-bold text-sm">28</div>
+                  <div class="text-green-400 text-[10px]">↑ 5%</div>
+                </div>
+                <div class="rounded-xl p-3" style="background:rgba(45,64,89,0.3); border:1px solid rgba(45,64,89,0.4)">
+                  <div class="text-gray-400 text-[10px] mb-1">Pelanggan Baru</div>
+                  <div class="text-light font-bold text-sm">7</div>
+                  <div class="text-blue-400 text-[10px]">Hari ini</div>
+                </div>
+                <div class="rounded-xl p-3" style="background:rgba(45,64,89,0.3); border:1px solid rgba(45,64,89,0.4)">
+                  <div class="text-gray-400 text-[10px] mb-1">Stok Menipis</div>
+                  <div class="text-light font-bold text-sm">3</div>
+                  <div class="text-red-400 text-[10px]">⚠ Perlu restock</div>
+                </div>
+              </div>
+
+              <!-- Chart Area -->
+              <div class="rounded-xl p-4" style="background:rgba(45,64,89,0.2); border:1px solid rgba(45,64,89,0.3)">
+                <div class="text-light text-xs font-semibold mb-3">Grafik Penjualan 7 Hari</div>
+                <div class="flex items-end gap-2 h-20">
+                  <div class="chart-bar flex-1" style="height:40%"></div>
+                  <div class="chart-bar flex-1" style="height:65%"></div>
+                  <div class="chart-bar flex-1" style="height:50%"></div>
+                  <div class="chart-bar flex-1" style="height:80%"></div>
+                  <div class="chart-bar flex-1" style="height:55%"></div>
+                  <div class="chart-bar flex-1" style="height:90%"></div>
+                  <div class="chart-bar flex-1" style="height:100%"></div>
+                </div>
+                <div class="flex justify-between text-gray-600 text-[9px] mt-1">
+                  <span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span><span>Sen</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="https://wa.me/6283829058640?text=Halo,%20saya%20ingin%20request%20demo%20sistem" target="_blank"
+           class="btn-accent inline-flex items-center gap-3 px-7 py-4 rounded-2xl font-bold relative z-10">
+          <i class="fa-solid fa-play-circle text-xl"></i>
+          Request Demo Langsung
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ESTIMASI HARGA ===================== -->
+<section id="pricing" class="py-24 px-4 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12 reveal">
+      <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 text-accent text-sm font-semibold mb-6">
+        <i class="fa-solid fa-calculator"></i> Kalkulator Harga Transparan
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-light mb-4">Hitung <span class="shimmer-text">Estimasi Harga</span></h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Centang fitur yang Anda butuhkan — total langsung dihitung secara real-time. Harga transparan, tidak ada biaya tersembunyi.</p>
+    </div>
+
+    <!-- Semua konten pricing akan dirender oleh estimasi.js -->
+    <div id="pricing-content" class="reveal">
+      <!-- Rendered entirely by estimasi.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROSES ===================== -->
+<section id="process" class="py-24 px-5 lg:px-8 relative">
+  <div class="max-w-7xl mx-auto">
+    <!-- Content rendered by JS -->
+  </div>
+</section>
+
+<!-- ===================== ORDER FORM ===================== -->
+<section id="order" class="py-24 px-4 md:px-8">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12 reveal">
+      <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 text-accent text-sm font-semibold mb-6">
+        <i class="fa-solid fa-paper-plane"></i>
+        Mulai Project
+      </div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-light mb-4">Isi <span class="text-accent">Form Order</span></h2>
+      <p class="text-gray-400 text-lg max-w-xl mx-auto">Tim kami akan menghubungi Anda dalam 1×24 jam untuk konfirmasi dan konsultasi lanjutan</p>
+    </div>
+    <!-- Form content rendered by orderForm.js -->
+    <div id="order-form-container"></div>
+  </div>
+</section>
+
+<!-- ===================== KEUNGGULAN ===================== -->
+<section id="advantages" class="py-24 px-5 lg:px-8 mesh-mid">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 text-accent text-sm font-semibold mb-6">
+        <i class="fa-solid fa-star"></i>
+        Kenapa ISR Tech?
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-light mb-4">Yang Membuat <span class="text-accent">Kami Berbeda</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+      <div class="card-solid rounded-2xl p-6 text-center hover:border-accent/30 transition-all group">
+        <div class="w-16 h-16 rounded-2xl gradient-accent flex items-center justify-center text-white text-2xl mx-auto mb-5 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-fingerprint"></i>
+        </div>
+        <h3 class="text-light font-bold mb-3">100% Custom</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Dibangun khusus sesuai alur kerja dan kebutuhan bisnis Anda. Bukan template, bukan generic solution.</p>
+      </div>
+
+      <div class="card-solid rounded-2xl p-6 text-center hover:border-accent/30 transition-all group">
+        <div class="w-16 h-16 rounded-2xl gradient-accent flex items-center justify-center text-white text-2xl mx-auto mb-5 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-plug-circle-check"></i>
+        </div>
+        <h3 class="text-light font-bold mb-3">Integrasi Canggih</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Sistem Anda bisa terhubung ke WhatsApp, payment gateway, marketplace, ERP, dan tools lainnya.</p>
+      </div>
+
+      <div class="card-solid rounded-2xl p-6 text-center hover:border-accent/30 transition-all group">
+        <div class="w-16 h-16 rounded-2xl gradient-accent flex items-center justify-center text-white text-2xl mx-auto mb-5 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-palette"></i>
+        </div>
+        <h3 class="text-light font-bold mb-3">UI Modern & Bersih</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Desain yang enak dipakai setiap hari. User-friendly untuk semua level kemampuan teknis pengguna.</p>
+      </div>
+
+      <div class="card-solid rounded-2xl p-6 text-center hover:border-accent/30 transition-all group">
+        <div class="w-16 h-16 rounded-2xl gradient-accent flex items-center justify-center text-white text-2xl mx-auto mb-5 group-hover:scale-110 transition-transform">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3 class="text-light font-bold mb-3">Support After-Launch</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">30 hari gratis maintenance & support. Tim kami selalu siap membantu jika ada kendala pasca launch.</p>
+      </div>
+    </div>
+
+    <!-- Testimonials row -->
+    <div class="grid md:grid-cols-3 gap-5 mt-10 reveal">
+      <div class="card-solid rounded-2xl p-6">
+        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-4">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4 italic">"Sistem inventori yang dibuat ISR Tech benar-benar mengubah cara kerja kami. Stok tidak pernah salah lagi dan laporan bisa langsung dilihat di HP."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full gradient-accent flex items-center justify-center text-white font-bold text-sm">B</div>
+          <div>
+            <div class="text-light text-sm font-semibold">Budi S.</div>
+            <div class="text-gray-500 text-xs">Owner Toko Material</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-solid rounded-2xl p-6">
+        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-4">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4 italic">"Dashboard HR yang mereka buat luar biasa. Absensi, gaji, dan cuti semua terotomasi. HRD kami hemat 20 jam per bulan untuk rekap manual."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full gradient-accent flex items-center justify-center text-white font-bold text-sm">R</div>
+          <div>
+            <div class="text-light text-sm font-semibold">Rina W.</div>
+            <div class="text-gray-500 text-xs">HRD Manager, PT Maju</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-solid rounded-2xl p-6">
+        <div class="flex items-center gap-1 text-yellow-400 text-sm mb-4">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4 italic">"Proses development transparan. Progress selalu diupdate. Tim ISR Tech responsif dan mau revisi tanpa drama. Highly recommended!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full gradient-accent flex items-center justify-center text-white font-bold text-sm">A</div>
+          <div>
+            <div class="text-light text-sm font-semibold">Ahmad F.</div>
+            <div class="text-gray-500 text-xs">IT Manager, Koperasi XYZ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="py-24 px-4 md:px-8">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12 reveal">
+      <div class="inline-flex items-center gap-2 bg-secondary/30 border border-secondary/40 rounded-full px-4 py-2 text-blue-300 text-sm font-semibold mb-6">
+        <i class="fa-solid fa-circle-question"></i>
+        FAQ
+      </div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-light mb-4">Pertanyaan <span class="text-accent">yang Sering Ditanya</span></h2>
+    </div>
+
+    <div class="space-y-3 reveal" id="faq-container">
+      <!-- FAQ items generated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section id="cta-final" class="py-24 px-4 md:px-8">
+  <div class="max-w-4xl mx-auto">
+    <div class="rounded-[28px] p-10 md:p-16 text-center relative overflow-hidden reveal" style="background:linear-gradient(135deg,rgba(255,87,34,0.17),rgba(45,64,89,0.35),rgba(255,87,34,0.1));border:1px solid rgba(255,87,34,0.32)">
+      <!-- Decorative circles -->
+      <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full" style="background: radial-gradient(circle, rgba(255,87,34,0.15), transparent 70%);"></div>
+      <div class="absolute -bottom-20 -left-20 w-64 h-64 rounded-full" style="background: radial-gradient(circle, rgba(45,64,89,0.3), transparent 70%);"></div>
+
+      <div class="relative z-10">
+        <div class="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 rounded-full px-4 py-2 text-accent text-sm font-semibold mb-8">
+          <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+          Mulai Digitalisasi Bisnis Anda Sekarang
+        </div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-light mb-6 leading-tight">
+          Siap Bangun Sistem<br/>
+          <span class="shimmer-text">Impian Anda?</span>
+        </h2>
+        <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+          Jangan biarkan proses manual menahan pertumbuhan bisnis Anda. Satu keputusan hari ini bisa mengubah cara bisnis Anda bekerja selamanya.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://wa.me/6283829058640?text=Halo%20ISR%20Tech,%20saya%20siap%20mulai%20project%20digitalisasi" target="_blank"
+             class="btn-accent px-9 py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 relative z-10">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+            Chat via WhatsApp
+          </a>
+          <a href="#order" class="btn-outline px-9 py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3">
+            <i class="fa-solid fa-file-signature"></i>
+            Isi Form Order
+          </a>
+        </div>
+        <p class="text-gray-500 text-sm mt-6">
+          <i class="fa-solid fa-phone mr-2 text-accent/60"></i>
+          Atau hubungi langsung: <span class="text-light font-medium">+62 838-2905-8640</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="border-t border-white/5 py-12 px-4 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-4 gap-8 mb-10">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="assets/isr-w.png" alt="ISR Tech Logo" class="h-9 w-auto">
+        </div>
+        <p class="text-gray-500 text-sm leading-relaxed max-w-xs">
+          Membangun sistem digital yang mengintegrasikan, mengotomasi, dan memvisualisasikan data bisnis Anda.
+        </p>
+        <div class="flex gap-3 mt-5">
+          <a href="#" class="w-9 h-9 rounded-xl card-solid flex items-center justify-center text-gray-400 hover:text-accent transition-colors">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-xl card-solid flex items-center justify-center text-gray-400 hover:text-accent transition-colors">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://wa.me/6283829058640" target="_blank" class="w-9 h-9 rounded-xl card-solid flex items-center justify-center text-gray-400 hover:text-green-400 transition-colors">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-xl card-solid flex items-center justify-center text-gray-400 hover:text-accent transition-colors">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-light font-bold mb-4 text-sm">Layanan</h4>
+        <ul class="space-y-2 text-gray-500 text-sm">
+          <li><a href="#carousel" class="hover:text-accent transition-colors">Custom Web App</a></li>
+          <li><a href="#carousel" class="hover:text-accent transition-colors">System Integration</a></li>
+          <li><a href="#carousel" class="hover:text-accent transition-colors">Reporting Dashboard</a></li>
+          <li><a href="#carousel" class="hover:text-accent transition-colors">Automation Tools</a></li>
+          <li><a href="#carousel" class="hover:text-accent transition-colors">Website + CMS</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-light font-bold mb-4 text-sm">Kontak</h4>
+        <ul class="space-y-3 text-gray-500 text-sm">
+          <li class="flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-green-400 w-4"></i>
+            +62 838-2905-8640
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-accent/70 w-4"></i>
+            gifarysetia10@gmail.com
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-accent/70 w-4"></i>
+            Bandung, Jawa Barat, Indonesia
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-clock text-accent/70 w-4"></i>
+            Sabtu – Minggu, 09.00 – 22.00
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/5 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-gray-600 text-xs">© 2026 ISR Tech. All rights reserved.</p>
+      <p class="text-gray-600 text-xs">Integrating System & Reporting — Solusi Digital Bisnis Anda</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== FLOATING WA BUTTON ===================== -->
+<a id="wa-float" href="https://wa.me/6283829058640?text=Halo%20ISR%20Tech,%20saya%20ingin%20konsultasi" target="_blank" title="Chat WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- SCROLL TOP -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">
+  <i class="fa-solid fa-chevron-up" style="font-size:13px"></i>
+</button>
+
+<!-- Load main.js as ES6 module -->
+<script type="module" src="main.js"></script>
+
+</body>
+</html>
