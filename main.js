@@ -1,11 +1,8 @@
-// ==================== MAIN ENTRY POINT ====================
-// ISR Tech - ES6 Module Architecture
-
-import { formatRp, formatShortNumber, debounce, throttle } from './js/utils.js';
+import { formatRp, formatShortNumber, debounce, throttle } from './js/core.js';
 import { initNavbar } from './js/navbar.js';
-import { initAnimations } from './js/animations.js';
+import { initTheme } from './js/theme.js';
+import { initHero } from './js/hero.js';
 import { initCarousel } from './js/layanan.js';
-import { initDarkMode } from './js/darkMode.js';
 import { initSegments } from './js/segments.js';
 import { initPricingCalculator } from './js/estimasi.js';
 import { initFAQ } from './js/faq.js';
@@ -23,9 +20,9 @@ window.formatShortNumber = formatShortNumber;
 // Initialize all modules when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
-  initAnimations();
+  initTheme(); // This now handles both animations and dark mode
+  initHero();
   initCarousel();
-  initDarkMode();
   initSegments();
   initPricingCalculator();
   initFAQ();
