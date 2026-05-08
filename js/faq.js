@@ -1,39 +1,4 @@
-// ==================== FAQ MODULE ====================
-
-const faqs = [
-  { 
-    q: 'Berapa biaya minimal untuk membuat aplikasi?', 
-    a: 'Dimulai dari Rp 100.000 untuk setup project dasar. Aplikasi CRUD sederhana dengan Google Sheets biasanya berkisar Rp 700K–1.5Jt. Gunakan kalkulator harga di atas untuk estimasi sesuai fitur yang Anda butuhkan.' 
-  },
-  { 
-    q: 'Database apa yang digunakan? Apakah perlu server?', 
-    a: 'Tidak perlu server berbayar! Kami menggunakan LocalStorage / IndexedDB untuk penyimpanan lokal di browser, dan Google Sheets sebagai database utama yang gratis. Cocok untuk aplikasi CRUD, monitoring, dan digitalisasi proses kerja.' 
-  },
-  { 
-    q: 'Apa itu Google Sheets sebagai database?', 
-    a: 'Google Sheets digunakan sebagai backend/database melalui Google Apps Script API. Data tersimpan di spreadsheet milik Anda sendiri — gratis, mudah diakses, dan bisa diedit langsung. Tidak perlu hosting database khusus.' 
-  },
-  { 
-    q: 'Apakah aplikasi bisa digunakan offline?', 
-    a: 'Ya! Dengan fitur IndexedDB + Offline Mode, aplikasi tetap bisa digunakan meski tidak ada koneksi internet. Data akan disinkronkan ke Google Sheets saat koneksi kembali tersedia.' 
-  },
-  { 
-    q: 'Berapa lama waktu pengerjaan?', 
-    a: 'Aplikasi sederhana (CRUD + dashboard) biasanya 1–3 minggu. Aplikasi dengan fitur lengkap 3–6 minggu. Kami akan memberikan estimasi waktu yang pasti setelah analisa kebutuhan.' 
-  },
-  { 
-    q: 'Apakah saya mendapatkan source code?', 
-    a: 'Ya! Source code HTML/CSS/JS 100% milik Anda. Tidak ada ketergantungan pada framework berbayar atau lisensi khusus. Anda bebas mengembangkan sendiri atau meminta kami untuk melanjutkan.' 
-  },
-  { 
-    q: 'Apakah bisa diinstall seperti aplikasi di HP?', 
-    a: 'Bisa! Dengan fitur PWA (Progressive Web App), aplikasi bisa diinstall di HP Android maupun iOS langsung dari browser — tanpa perlu upload ke Play Store atau App Store.' 
-  },
-  { 
-    q: 'Bagaimana dengan keamanan data di Google Sheets?', 
-    a: 'Data di Google Sheets dilindungi oleh akun Google Anda. Akses diatur melalui sistem permission Google. Kami juga bisa menambahkan lapisan autentikasi login di sisi aplikasi untuk keamanan tambahan.' 
-  },
-];
+import { faqData } from './core.js';
 
 /**
  * Render FAQ items ke dalam container
@@ -41,12 +6,12 @@ const faqs = [
 function renderFAQs() {
   const faqContainer = document.getElementById('faq-container');
   if (!faqContainer) return;
-
+  
   // Clear existing content
   faqContainer.innerHTML = '';
 
   // Generate FAQ items
-  faqs.forEach((faq, index) => {
+  faqData.forEach((faq, index) => {
     const faqItem = document.createElement('div');
     faqItem.className = 'card-solid overflow-hidden';
     faqItem.style.cssText = 'border-radius:16px; border:1px solid rgba(45,64,89,0.5); transition: all 0.3s ease;';

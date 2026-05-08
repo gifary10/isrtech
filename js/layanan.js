@@ -1,51 +1,8 @@
-// ==================== LAYANAN CAROUSEL MODULE ====================
+import { carouselData } from './core.js';
 
 let currentSlide = 0;
-const totalSlides = 4;
+const totalSlides = carouselData.length;
 let autoPlayInterval = null;
-
-const carouselData = [
-  {
-    badge: 'Digital Catalog App',
-    icon: 'fa-book-open',
-    title: 'Aplikasi <span class="text-accent">Katalog Digital</span>',
-    description: 'Solusi katalog & menu digital interaktif untuk menampilkan produk atau layanan secara modern. Mudah dikelola, dapat diperbarui realtime, dan terintegrasi dengan Google Sheets sebagai database.',
-    tags: ['Catalog System', 'Realtime Update', 'Multi User'],
-    image: 'assets/gambar1.jpeg',
-    alt: 'Aplikasi Katalog Digital',
-    waMessage: 'Halo%20ISR%20Tech,%20saya%20ingin%20konsultasi%20aplikasi%20katalog%20digital'
-  },
-  {
-    badge: 'Clinic Dashboard',
-    icon: 'fa-notes-medical',
-    title: 'Dashboard <span class="text-accent">In-House Clinic</span>',
-    description: 'Dashboard monitoring klinik internal untuk memantau kunjungan pasien, rekam aktivitas layanan, stok obat, serta KPI kesehatan karyawan secara real-time. Terintegrasi dengan Google Sheets dan dapat diakses dari HP maupun PC.',
-    tags: ['Patient Tracking', 'Medical KPI', 'Realtime Monitoring'],
-    image: 'assets/gambar2.jpeg',
-    alt: 'Dashboard In-House Clinic',
-    waMessage: 'Halo%20ISR%20Tech,%20saya%20ingin%20konsultasi%20dashboard%20in-house%20clinic'
-  },
-  {
-    badge: 'CRUD System',
-    icon: 'fa-database',
-    title: 'Aplikasi <span class="text-accent">CRUD System</span>',
-    description: 'Aplikasi manajemen data terintegrasi untuk mencatat, mengelola, dan memproses informasi secara efisien — mulai dari tambah, lihat, ubah hingga hapus data. Terhubung dengan Google Sheets sebagai database, mendukung multi-user dan update realtime.',
-    tags: ['Data Management', 'Google Sheets', 'Realtime System'],
-    image: 'assets/gambar3.jpeg',
-    alt: 'Aplikasi CRUD System',
-    waMessage: 'Halo%20ISR%20Tech,%20saya%20ingin%20konsultasi%20aplikasi%20CRUD%20system'
-  },
-  {
-    badge: 'Wedding Invitation App',
-    icon: 'fa-heart',
-    title: 'Aplikasi <span class="text-accent">Wedding Invitation</span>',
-    description: 'Undangan pernikahan digital yang elegan dan interaktif. Dilengkapi dengan galeri foto, cerita pasangan, RSVP online, peta lokasi, serta musik latar untuk memberikan pengalaman undangan yang berkesan.',
-    tags: ['Digital Invitation', 'RSVP Online', 'Custom Design'],
-    image: 'assets/gambar4.jpeg',
-    alt: 'Aplikasi Wedding Invitation',
-    waMessage: 'Halo%20ISR%20Tech,%20saya%20ingin%20konsultasi%20aplikasi%20wedding%20invitation'
-  }
-];
 
 /**
  * Render carousel slides and thumbnails
@@ -223,18 +180,29 @@ export function initCarousel() {
   if (prevBtn) prevBtn.addEventListener('click', prevSlide);
   if (nextBtn) nextBtn.addEventListener('click', nextSlide);
 
-  // Dot click handlers
-  document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
-    dot.addEventListener('click', () => goToSlide(i));
-  });
-
-  // Thumbnail click handlers
-  document.querySelectorAll('[data-index]').forEach(thumb => {
-    thumb.addEventListener('click', () => {
-      const index = parseInt(thumb.dataset.index);
-      goToSlide(index);
+  // Dot click handlers - use event delegation
+  const dotsContainer = document.querySelector('.carousel-container .absolute.bottom-4');
+  if (dotsContainer) {
+    dotsContainer.addEventListener('click', (e) => {
+      const dot = e.target.closest('.carousel-dot');
+      if (dot) {
+        const index = parseInt(dot.getAttribute('data-index'));
+        goToSlide(index);
+      }
     });
-  });
+  }
+
+  // Thumbnail click handlers - use event delegation
+  const thumbsContainer = document.querySelector('.carousel-container + div');
+  if (thumbsContainer) {
+    thumbsContainer.addEventListener('click', (e) => {
+      const thumb = e.target.closest('[data-index]');
+      if (thumb) {
+        const index = parseInt(thumb.getAttribute('data-index'));
+        goToSlide(index);
+      }
+    });
+  }
 
   // Keyboard navigation
   document.addEventListener('keydown', (e) => {
